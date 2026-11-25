@@ -1,0 +1,64 @@
+STEAMTRACE v1.0 — DEMO & VIVA NOTES
+=====================================
+
+DEMO COMMAND
+python steamtrace/collector.py sample_evidence -o demo_output --case-id CASE-001 --examiner "Student Name"
+
+TEST COMMAND
+python -m unittest discover -s tests -v
+
+EXPECTED DEMO SUMMARY WITH INCLUDED SYNTHETIC FIXTURES
+Files hashed: 2
+Timeline events: 6
+Collection / parsing errors: 0
+
+EXPECTED OUTPUTS
+demo_output/timeline.json
+demo_output/timeline.csv
+demo_output/events.csv
+demo_output/evidence_manifest.json
+demo_output/collection_errors.json
+demo_output/case_report.html
+
+3-MINUTE EXPLANATION
+1. SteamTrace is a Python academic prototype for organizing authorized Steam-related evidence copies.
+2. It inventories files recursively and computes SHA-256 digests in chunks.
+3. It adds two limited parsers: a subset of Valve KeyValues syntax in .vdf files and selected timestamped Steam-style log messages.
+4. It merges parsed artifact events with file metadata events in a source-labelled timeline.
+5. It exports machine-readable JSON/CSV, a hash manifest and an HTML case report.
+6. The sample files are synthetic training fixtures, and LuaTools-specific detection is not implemented yet.
+
+LIKELY VIVA QUESTIONS
+
+Q: What is SHA-256 and why is it used?
+A: SHA-256 is a cryptographic hash function that produces a 256-bit digest. It provides a compact fingerprint for later integrity comparison. It does not prove chain of custody by itself.
+
+Q: What is Valve KeyValues?
+A: It is a text-based key/value data format used by Valve applications. This project implements a limited parser for quoted keys/values, nested braces, comments and duplicate keys.
+
+Q: What does the log parser recognize?
+A: It reads lines beginning with a timestamp in [YYYY-MM-DD HH:MM:SS] format and classifies selected app-update-started, app-update-completed and download-queued phrases.
+
+Q: Why is the parser described as a subset?
+A: Real-world formats can include dialect-specific syntax, escapes, encodings and structures not covered by this prototype. The parser must be validated against authentic, authorized samples.
+
+Q: Does this prove a user updated or downloaded a game?
+A: No. It reports text present in a supplied log file. The log's authenticity, timezone and interpretation must be independently established.
+
+Q: Why convert timestamps to UTC?
+A: A normalized time format helps compare events. But a source timezone must be known. This prototype currently assumes UTC for the selected log timestamp strings, which is a limitation to validate.
+
+Q: Does this detect LuaTools?
+A: No. LuaTools is the planned case-study focus. The current release does not include LuaTools-specific artifact detection.
+
+Q: What does the HTML report add?
+A: It gives an examiner a local summary of case metadata, collection counts, the event timeline and file inventory without requiring an external service.
+
+Q: Why skip symbolic links?
+A: To avoid unexpectedly following paths outside the supplied evidence tree and to keep traversal scope predictable.
+
+Q: What would you improve next?
+A: Validate parsers against authentic artifacts, establish timestamp provenance, add further Steam parsers, import OS event logs, and only then implement a LuaTools-specific analysis module.
+
+IMPORTANT CLAIM BOUNDARIES
+Do not say that the project identifies a person, proves Steam activity, detects LuaTools, or has been forensically validated. Describe the sample dataset as synthetic.
