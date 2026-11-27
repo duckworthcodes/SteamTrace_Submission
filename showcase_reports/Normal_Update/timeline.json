@@ -1,0 +1,126 @@
+{
+  "tool": "SteamTrace",
+  "version": "1.0.0",
+  "case_id": "CASE-001",
+  "examiner": "Forensic Flux",
+  "collected_at_utc": "2026-11-27T04:32:45.266578+00:00",
+  "source_directory": "C:\\Users\\maggi\\Downloads\\SteamTrace Submission\\showcase_evidence\\Normal_Update",
+  "host_platform": "Windows-11-10.0.26300-SP0",
+  "record_count": 2,
+  "event_count": 6,
+  "error_count": 0,
+  "timestamp_note": "Filesystem and log timestamps are source data, not proof of user activity.",
+  "records": [
+    {
+      "relative_path": "steam/config/config.vdf",
+      "file_name": "config.vdf",
+      "extension": ".vdf",
+      "size_bytes": 142,
+      "sha256": "161af129d85cafe0588f02eacf37944db9bb3582f6024ef5b858d029e7d33292",
+      "modified_utc": "2026-11-27T04:32:44.375218+00:00",
+      "created_utc": "2026-11-27T04:32:44.375218+00:00",
+      "created_time_source": "birth_time",
+      "changed_utc": null,
+      "event_type": "FILE_METADATA",
+      "collection_status": "HASHED"
+    },
+    {
+      "relative_path": "steam/logs/content_log.txt",
+      "file_name": "content_log.txt",
+      "extension": ".txt",
+      "size_bytes": 197,
+      "sha256": "a8052dedf883260a3fd945c7169fc215cdb9adfff35ad147daa1433ff5a61efc",
+      "modified_utc": "2026-11-27T04:32:44.375218+00:00",
+      "created_utc": "2026-11-27T04:32:44.375218+00:00",
+      "created_time_source": "birth_time",
+      "changed_utc": null,
+      "event_type": "FILE_METADATA",
+      "collection_status": "HASHED"
+    }
+  ],
+  "events": [
+    {
+      "event_time_utc": null,
+      "event_type": "STEAM_CONFIG_PARSED",
+      "source_path": "steam/config/config.vdf",
+      "description": "Valve KeyValues configuration parsed; values retained as structured artifact data.",
+      "details": {
+        "top_level_keys": [
+          "InstallConfigStore"
+        ],
+        "parsed_data": {
+          "InstallConfigStore": {
+            "Software": {
+              "Valve": {
+                "Steam": {
+                  "RememberPassword": "1",
+                  "AutoUpdateWindowEnabled": "1"
+                }
+              }
+            }
+          }
+        }
+      },
+      "confidence": "high_for_file_content",
+      "timestamp_basis": "no event timestamp inferred"
+    },
+    {
+      "event_time_utc": "2026-11-26T09:00:00+00:00",
+      "event_type": "STEAM_APP_UPDATE_STARTED",
+      "source_path": "steam/logs/content_log.txt",
+      "description": "App update started: appid=570",
+      "details": {
+        "line_number": 2
+      },
+      "confidence": "medium_timestamp_from_log_text",
+      "timestamp_basis": "timestamp string parsed from log line"
+    },
+    {
+      "event_time_utc": "2026-11-26T09:03:00+00:00",
+      "event_type": "STEAM_APP_UPDATE_COMPLETED",
+      "source_path": "steam/logs/content_log.txt",
+      "description": "App update completed: appid=570 result=success",
+      "details": {
+        "line_number": 3
+      },
+      "confidence": "medium_timestamp_from_log_text",
+      "timestamp_basis": "timestamp string parsed from log line"
+    },
+    {
+      "event_time_utc": "2026-11-26T09:05:00+00:00",
+      "event_type": "STEAM_DOWNLOAD_QUEUED",
+      "source_path": "steam/logs/content_log.txt",
+      "description": "Download queued: appid=730",
+      "details": {
+        "line_number": 4
+      },
+      "confidence": "medium_timestamp_from_log_text",
+      "timestamp_basis": "timestamp string parsed from log line"
+    },
+    {
+      "event_time_utc": "2026-11-27T04:32:44.375218+00:00",
+      "event_type": "FILE_METADATA",
+      "source_path": "steam/config/config.vdf",
+      "description": "File inventoried and SHA-256 hashed (142 bytes).",
+      "details": {
+        "sha256": "161af129d85cafe0588f02eacf37944db9bb3582f6024ef5b858d029e7d33292",
+        "extension": ".vdf"
+      },
+      "confidence": "high_for_observed_metadata",
+      "timestamp_basis": "filesystem modification time"
+    },
+    {
+      "event_time_utc": "2026-11-27T04:32:44.375218+00:00",
+      "event_type": "FILE_METADATA",
+      "source_path": "steam/logs/content_log.txt",
+      "description": "File inventoried and SHA-256 hashed (197 bytes).",
+      "details": {
+        "sha256": "a8052dedf883260a3fd945c7169fc215cdb9adfff35ad147daa1433ff5a61efc",
+        "extension": ".txt"
+      },
+      "confidence": "high_for_observed_metadata",
+      "timestamp_basis": "filesystem modification time"
+    }
+  ],
+  "errors": []
+}

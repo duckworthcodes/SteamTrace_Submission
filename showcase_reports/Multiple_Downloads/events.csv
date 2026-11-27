@@ -1,0 +1,7 @@
+﻿event_time_utc,event_type,source_path,description,confidence,timestamp_basis
+,STEAM_CONFIG_PARSED,steam/config/config.vdf,Valve KeyValues configuration parsed; values retained as structured artifact data.,high_for_file_content,no event timestamp inferred
+2026-11-26T10:00:00+00:00,STEAM_DOWNLOAD_QUEUED,steam/logs/content_log.txt,Download queued: appid=570,medium_timestamp_from_log_text,timestamp string parsed from log line
+2026-11-26T10:02:00+00:00,STEAM_DOWNLOAD_QUEUED,steam/logs/content_log.txt,Download queued: appid=730,medium_timestamp_from_log_text,timestamp string parsed from log line
+2026-11-26T10:05:00+00:00,STEAM_DOWNLOAD_QUEUED,steam/logs/content_log.txt,Download queued: appid=440,medium_timestamp_from_log_text,timestamp string parsed from log line
+2026-11-27T04:32:45.444468+00:00,FILE_METADATA,steam/config/config.vdf,File inventoried and SHA-256 hashed (142 bytes).,high_for_observed_metadata,filesystem modification time
+2026-11-27T04:32:45.452399+00:00,FILE_METADATA,steam/logs/content_log.txt,File inventoried and SHA-256 hashed (174 bytes).,high_for_observed_metadata,filesystem modification time

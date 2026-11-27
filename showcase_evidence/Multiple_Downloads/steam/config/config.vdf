@@ -1,0 +1,7 @@
+"InstallConfigStore"
+{
+    "Software" { "Valve" { "Steam" {
+        "RememberPassword" "0"
+        "AutoUpdateWindowEnabled" "1"
+    } } }
+}

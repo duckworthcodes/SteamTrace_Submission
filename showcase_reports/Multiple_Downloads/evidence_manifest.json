@@ -1,0 +1,18 @@
+{
+  "tool": "SteamTrace",
+  "version": "1.0.0",
+  "case_id": "CASE-002",
+  "generated_at_utc": "2026-11-27T04:32:45.611496+00:00",
+  "hash_algorithm": "SHA-256",
+  "hashed_file_count": 2,
+  "files": [
+    {
+      "path": "steam/config/config.vdf",
+      "sha256": "7de42c54874d5f411e4927d6e49146961e070e149925c59b3b326fb3d0929b4d"
+    },
+    {
+      "path": "steam/logs/content_log.txt",
+      "sha256": "bf58777f157fdb37983b4b48be1cf945b3a2ce00e19df5b2b93de2fc6eddf920"
+    }
+  ]
+}

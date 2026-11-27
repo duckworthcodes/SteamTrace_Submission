@@ -1,0 +1,4 @@
+# SYNTHETIC TRAINING DATA — NOT REAL STEAM EVIDENCE
+[2026-11-24 09:15:00] App update started: appid=570
+[2026-11-24 09:16:42] App update completed: appid=570 result=success
+[2026-11-24 09:20:10] Download queued: appid=730

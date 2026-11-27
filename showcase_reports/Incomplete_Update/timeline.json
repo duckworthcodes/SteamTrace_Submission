@@ -1,0 +1,104 @@
+{
+  "tool": "SteamTrace",
+  "version": "1.0.0",
+  "case_id": "CASE-003",
+  "examiner": "Forensic Flux",
+  "collected_at_utc": "2026-11-27T04:32:45.875609+00:00",
+  "source_directory": "C:\\Users\\maggi\\Downloads\\SteamTrace Submission\\showcase_evidence\\Incomplete_Update",
+  "host_platform": "Windows-11-10.0.26300-SP0",
+  "record_count": 2,
+  "event_count": 4,
+  "error_count": 0,
+  "timestamp_note": "Filesystem and log timestamps are source data, not proof of user activity.",
+  "records": [
+    {
+      "relative_path": "steam/config/config.vdf",
+      "file_name": "config.vdf",
+      "extension": ".vdf",
+      "size_bytes": 142,
+      "sha256": "c26a2d8128b7bdf1967974c3f97f6b5370070655b35e608099e95dc45dab60eb",
+      "modified_utc": "2026-11-27T04:32:45.708219+00:00",
+      "created_utc": "2026-11-27T04:32:45.708219+00:00",
+      "created_time_source": "birth_time",
+      "changed_utc": null,
+      "event_type": "FILE_METADATA",
+      "collection_status": "HASHED"
+    },
+    {
+      "relative_path": "steam/logs/content_log.txt",
+      "file_name": "content_log.txt",
+      "extension": ".txt",
+      "size_bytes": 79,
+      "sha256": "ecdc7b83d2f6d44ecf8543e66ee63ab69e5a759562b34dc5faf5707fede2b7f4",
+      "modified_utc": "2026-11-27T04:32:45.708219+00:00",
+      "created_utc": "2026-11-27T04:32:45.708219+00:00",
+      "created_time_source": "birth_time",
+      "changed_utc": null,
+      "event_type": "FILE_METADATA",
+      "collection_status": "HASHED"
+    }
+  ],
+  "events": [
+    {
+      "event_time_utc": null,
+      "event_type": "STEAM_CONFIG_PARSED",
+      "source_path": "steam/config/config.vdf",
+      "description": "Valve KeyValues configuration parsed; values retained as structured artifact data.",
+      "details": {
+        "top_level_keys": [
+          "InstallConfigStore"
+        ],
+        "parsed_data": {
+          "InstallConfigStore": {
+            "Software": {
+              "Valve": {
+                "Steam": {
+                  "RememberPassword": "1",
+                  "AutoUpdateWindowEnabled": "0"
+                }
+              }
+            }
+          }
+        }
+      },
+      "confidence": "high_for_file_content",
+      "timestamp_basis": "no event timestamp inferred"
+    },
+    {
+      "event_time_utc": "2026-11-26T11:00:00+00:00",
+      "event_type": "STEAM_APP_UPDATE_STARTED",
+      "source_path": "steam/logs/content_log.txt",
+      "description": "App update started: appid=570",
+      "details": {
+        "line_number": 2
+      },
+      "confidence": "medium_timestamp_from_log_text",
+      "timestamp_basis": "timestamp string parsed from log line"
+    },
+    {
+      "event_time_utc": "2026-11-27T04:32:45.708219+00:00",
+      "event_type": "FILE_METADATA",
+      "source_path": "steam/config/config.vdf",
+      "description": "File inventoried and SHA-256 hashed (142 bytes).",
+      "details": {
+        "sha256": "c26a2d8128b7bdf1967974c3f97f6b5370070655b35e608099e95dc45dab60eb",
+        "extension": ".vdf"
+      },
+      "confidence": "high_for_observed_metadata",
+      "timestamp_basis": "filesystem modification time"
+    },
+    {
+      "event_time_utc": "2026-11-27T04:32:45.708219+00:00",
+      "event_type": "FILE_METADATA",
+      "source_path": "steam/logs/content_log.txt",
+      "description": "File inventoried and SHA-256 hashed (79 bytes).",
+      "details": {
+        "sha256": "ecdc7b83d2f6d44ecf8543e66ee63ab69e5a759562b34dc5faf5707fede2b7f4",
+        "extension": ".txt"
+      },
+      "confidence": "high_for_observed_metadata",
+      "timestamp_basis": "filesystem modification time"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,3 @@
+﻿relative_path,file_name,extension,size_bytes,sha256,modified_utc,created_utc,created_time_source,changed_utc,event_type,collection_status
+steam/config/config.vdf,config.vdf,.vdf,142,7de42c54874d5f411e4927d6e49146961e070e149925c59b3b326fb3d0929b4d,2026-11-27T04:32:45.444468+00:00,2026-11-27T04:32:45.444468+00:00,birth_time,,FILE_METADATA,HASHED
+steam/logs/content_log.txt,content_log.txt,.txt,174,bf58777f157fdb37983b4b48be1cf945b3a2ce00e19df5b2b93de2fc6eddf920,2026-11-27T04:32:45.452399+00:00,2026-11-27T04:32:45.452399+00:00,birth_time,,FILE_METADATA,HASHED
